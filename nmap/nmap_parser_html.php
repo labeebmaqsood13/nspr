@@ -10,6 +10,7 @@
 //-------------------------------------DATABASE CLASS----------------------------------------------------------
 
 	require_once('../includes/database.php');
+	// $db = new Database('a1613428_nspr');
 	$db = new Database('nspr_nmap');
 
 
@@ -199,7 +200,7 @@
 
 //------------------------------REPORT_TABLE---------------------------------
 
-	$report_table= [];
+	$report_table;
 	foreach($each_line as $line){
 		if($table = $regex->table($line) ){
 			$table_components = preg_split('/\s+/', $table[0]);

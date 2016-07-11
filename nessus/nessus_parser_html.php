@@ -262,7 +262,7 @@
 
 //------------------------------REPORT_TABLE---------------------------------
 
-	$report_items= [];
+	$report_items;
 
 	//Regex Here
 	$table = $regex->table($reading);

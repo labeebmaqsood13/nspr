@@ -11,6 +11,7 @@
 
 	require_once('../includes/database.php');	
 	$db = new Database('nspr_nmap');
+	// $db = new Database('a1613428_nspr');
 
 
 	//Connection Testing
@@ -246,7 +247,7 @@
 	$sheet -> setCellValue('G1', 'Service');
 	$sheet -> setCellValue('H1', 'Port');
 	$sheet -> setCellValue('I1', 'Port State');
-	$report_table= [];
+	$report_table;
 	$y=3;
 	foreach($each_line as $line){
 		if($table = $regex->table($line) ){

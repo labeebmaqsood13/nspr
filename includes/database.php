@@ -11,6 +11,8 @@ class Database{
 	public function open_db_connection($database){
 
 		$this->connection = new mysqli('localhost','root','',$database);
+	
+
 			if($this->connection->connect_errno > 0){
 			   	 die('Unable to connect to database [' . $this->connection->connect_error . ']');
 			}

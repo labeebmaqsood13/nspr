@@ -12,6 +12,7 @@
 
 	require_once('../includes/database.php');
 	$db = new Database('nspr_nmap');
+	// $db = new Database('a1613428_nspr');	
 
 	//Connection Testing
 	// if($db->connection){
@@ -60,7 +61,9 @@
 //------------------------------------FPDF REQUIRE-----------------------------------------------------------
 
 
-	require_once('..\lib\fpdf181\fpdf.php');
+	require_once('..\libs\fpdf181\fpdf.php'); // issue on linux
+	// require_once('../libs/fpdf181/fpdf.php'); // no issue on linux
+
 	$pdf = new fpdf();
 	//var_dump(get_class_methods($pdf));
 	$pdf->AddPage();
@@ -249,7 +252,7 @@
 	$pdf->Cell(40,10, 'Port');
 	$pdf->Cell(40,10, 'Port State');
     $pdf->Cell(40,10, 'Service',0 ,1, 'C');
-	$report_table= [];
+	$report_table;
 	foreach($each_line as $line){
 		if($table = $regex->table($line) ){
 			$table_components = preg_split('/\s+/', $table[0]);

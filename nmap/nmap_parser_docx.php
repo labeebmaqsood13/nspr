@@ -11,7 +11,7 @@
 
 	require_once('../includes/database.php');
 	$db = new Database('nspr_nmap');
-
+	// $db = new Database('a1613428_nspr');
 
 	//Connection Testing
 	// if($db->connection){
