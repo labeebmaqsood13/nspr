@@ -101,7 +101,7 @@ require_once 'includes/upload.php';
        <div class="form-group">
           <label for="exampleInputFile">Nessus File input</label>
           <input type="file" name="nessus_fileToUpload" id="nessus_fileToUpload">
-          <p class="help-block">Choose .xml file</p>
+          <p class="help-block">Choose .nessus file</p>
        </div>
        <button type="submit" class="btn btn-default" name="nessus">Upload File</button>
     </div>    
