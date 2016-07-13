@@ -1,3 +1,7 @@
+<?php
+require_once 'includes/upload.php';  
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,7 +12,13 @@
     <script src="bootstrap-3.3.6-dist/js/bootstrap.min.js"></script>
 	<title>NSPR.</title>
 </head>
+
+
+
 <body>
+
+<!--========================================HEADER STARTS HERE ===================================================================-->
+
 <nav class="navbar navbar-default navbar-inverse">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -72,5 +82,31 @@
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+<!--========================================BODY STARTS HERE ===================================================================-->
+
+<div class="container container-fluid">
+<form action="<?=$_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">
+    <div class="col-md-3 pull-left">
+         <div class="form-group">
+            <label for="exampleInputFile">Nmap File input</label>
+            <input type="file" name="nmap_fileToUpload" id="nmap_fileToUpload">
+            <p class="help-block">Choose .txt file</p>
+         </div>
+         <button type="submit" class="btn btn-default" name="nmap">Upload File</button>
+    </div>
+</form>
+<form action="<?=$_SERVER['PHP_SELF'];?>" method="post" enctype="multipart/form-data">          
+    <div class="col-md-3 pull-left">
+       <div class="form-group">
+          <label for="exampleInputFile">Nessus File input</label>
+          <input type="file" name="nessus_fileToUpload" id="nessus_fileToUpload">
+          <p class="help-block">Choose .xml file</p>
+       </div>
+       <button type="submit" class="btn btn-default" name="nessus">Upload File</button>
+    </div>    
+</form>
+</div>
+
 </body>
 </html>
