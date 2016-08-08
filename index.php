@@ -44,6 +44,8 @@ require_once 'includes/upload.php';
             <li role="separator" class="divider"></li>
             <li><a href="nessus/nessus_parser_docx.php">Word Document</a></li>
             <li role="separator" class="divider"></li>
+            <li><a href="nessus/nessus_parser_docx_update.php">Updated Word Document</a></li>
+            <li role="separator" class="divider"></li>
             <li><a href="nessus/nessus_parser_excel.php">Excel Spreadsheet</a></li> 
             <li role="separator" class="divider"></li>
             <li><a href="nessus/nessus_parser_html.php">Webpage Report</a></li>  
